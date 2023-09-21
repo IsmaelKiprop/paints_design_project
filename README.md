@@ -3,7 +3,8 @@
 Welcome to the Ismael Tech Gallery Feature! We are thrilled to introduce you to our latest enhancements designed to make your gallery experience even better. With a focus on security, efficiency, and user-friendliness, we have brought together powerful features to help you manage and showcase your precious memories seamlessly.
 
 
-![Alt text](image.png)
+<img width="960" alt="image" src="https://github.com/IsmaelKiprop/paints_design_project/assets/133222922/26f52077-ed7f-4930-994e-d8dc13629afa">
+
 
 ## Table of Contents
 
