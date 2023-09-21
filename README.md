@@ -90,6 +90,9 @@ Our Gallery Feature combines the power of authentication, seamless database inte
 
 ## Effortless Uploading
 
+<img width="960" alt="image" src="https://github.com/IsmaelKiprop/paints_design_project/assets/133222922/68ce1b04-4209-4c64-b0c8-961d56f249fb">
+
+
 Uploading your images is a breeze with Ismael Tech Gallery Feature. Our user-friendly interface allows you to:
 
 - Select and upload multiple images at once.
