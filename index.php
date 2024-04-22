@@ -194,7 +194,7 @@
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                     <h4 class="section-title">About Us</h4>
-                    <h1 class="display-5 mb-4">Abdul Paints and Design company For Your Dream Home</h1>
+                    <h1 class="display-5 mb-4">Abdul Paints and Designs company For Your Dream Home</h1>
                     <p>Abdul Paints & Designs is a company that deals with General Paintings, interior and exterior designs that provides flooring solutions, color selection, window treatments, wall coverings, custom cabinetry, lighting design, space planning, textile selection, and accessory recommendations.</p>
                     <p class="mb-4"> We are dedicated to providing our customers with exceptional customer service and friendly service. Our loyalty program rewards customers for their continued patronage. With our expansive selection of services and products we are sure to help you create the perfect space for your home or business. Let us help you transform your house into a home!
 
