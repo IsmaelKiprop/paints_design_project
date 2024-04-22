@@ -82,7 +82,7 @@
                         <a href="feature.php" class="dropdown-item">Our Features</a>
                         <a href="project.php" class="dropdown-item">Our Projects</a>
                         <a href="team.php" class="dropdown-item active">Team Members</a>
-                        <a href="appointment.phpl" class="dropdown-item">Appointment</a>
+                        <a href="appointment.php" class="dropdown-item">Appointment</a>
                         <a href="testimonial.php" class="dropdown-item">Testimonial</a>
                         <a href="gallery.php" class="dropdown-item">Gallery</a>
                     </div>
