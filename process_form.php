@@ -34,14 +34,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'kipropismael27@gmail.com';
-        $mail->Password = 'ieeaqolgwbolaqvk';
+        $mail->Username = 'abdulpaintsanddesign@gmail.com';
+        $mail->Password = 'abdul001???';
         $mail->SMTPSecure = 'tls'; // Enable TLS encryption (or 'ssl' for SSL encryption)
         $mail->Port = 587; // Use 587 for TLS or 465 for SSL
 
         // Sender and recipient
         $mail->setFrom($email, $name); // Use the submitted email and name as the sender
-        $mail->addAddress('kipropismael27@gmail.com', 'Ismael'); // Replace with the recipient's email and name
+        $mail->addAddress('abdulpaintsanddesign@gmail.com', 'Abdul'); // Replace with the recipient's email and name
 
         // Email content
         $mail->isHTML(false); // Set to true if your email content is HTML
