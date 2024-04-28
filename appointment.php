@@ -47,7 +47,7 @@
             <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-3">
                     <a class="text-body px-2" href="tel:+254 718 893 450"><i class="fa fa-phone-alt text-primary me-2"></i>+254 718 893 450</a>
-                    <a class="text-body px-2" href="mailto:abdulpaintsdesigns45@gmail.com"><i class="fa fa-envelope-open text-primary me-2"></i>abdulpaintsdesigns45@gmail.com</a>
+                    <a class="text-body px-2" href="mailto:abdulpaintsdesigns45@gmail.com"><i class="fa fa-envelope-open text-primary me-2"></i>abdulpaintsanddesign@gmail.com</a>
                 </div>
             </div>
             <div class="col-lg-5 px-5 text-end">
@@ -137,7 +137,7 @@
                             </div>
                             <div class="ms-4">
                                 <p class="mb-2">Mail Us Now</p>
-                                <h3 class="mb-0">abdulpaintsdesigns45@gmail.com</h3>
+                                <h3 class="mb-0">abdulpaintsanddesign@gmail.com</h3>
                             </div>
                         </div>
                     </div>
@@ -199,7 +199,7 @@
                     <h3 class="text-light mb-4">Address</h3>
                     <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Mombasa, KENYA</p>
                     <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+254 718-893-450</p>
-                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>abdulpaintsdesigns45@gmail.com</p>
+                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>abdulpaintsanddesign@gmail.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
