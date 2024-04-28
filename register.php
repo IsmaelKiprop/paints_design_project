@@ -39,6 +39,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $role = $_POST['role'];
     }
 
+    // Check if the selected role is "Owner"
+    if ($role === 'Owner') {
+        // Check if this is the first owner registered
+        $sql = "SELECT COUNT(*) AS ownerCount FROM users WHERE role = 'Owner'";
+        $result = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_assoc($result);
+        $ownerCount = $row['ownerCount'];
+
+        // If this is the first owner, grant admin privileges
+        if ($ownerCount === 0) {
+            $role = 'Admin'; // Update the role to Admin
+        } else {
+            // If not the first owner, redirect to registration page
+            echo "<script>alert('You don't have permission to register as an owner. Please register as regular.');</script>";
+            echo "<script>window.location.href = 'register.php';</script>";
+            exit();
+        }
+    }
+
     // Check if there are no input errors
     if (empty($usernameErr) && empty($emailErr) && empty($passwordErr)) {
         // Insert user into the database using prepared statements
