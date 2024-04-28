@@ -15,7 +15,6 @@ $serviceNames = [
     '6' => 'Ruff & Tuff'
 ];
 
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve form data
     $name = $_POST["name"];
@@ -53,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->send();
 
         // Email sent successfully
-        header("Location: thank_you.php");
+        header("Location: thank_you.php?success=true"); // Redirect to thank_you.php with success parameter
         exit();
     } catch (Exception $e) {
         // Email sending failed
