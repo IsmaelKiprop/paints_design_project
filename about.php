@@ -117,20 +117,15 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <div class="about-img">
-                        <img class="img-fluid" src="img/abdul/gypsam (15).jpeg" alt="">
-                        <img class="img-fluid" src="img/abdul/paint (3).jpeg" alt="">
+                        <img class="img-fluid" src="img/abdul/gypsam (15).jpeg" alt="Gypsum Image">
+                        <img class="img-fluid" src="img/team1.jpg" alt="Paint Image">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                     <h4 class="section-title">About Us</h4>
-                    <h1 class="display-5 mb-4">Abdul Paints and Design company For Your Dream Home</h1>
+                    <h1 class="display-5 mb-4">Abdul Paints and Designs Company For Your Dream Home</h1>
                     <p>Abdul Paints & Designs is a company that deals with General Paintings, interior and exterior designs that provides flooring solutions, color selection, window treatments, wall coverings, custom cabinetry, lighting design, space planning, textile selection, and accessory recommendations.</p>
-                    <p class="mb-4"> We are dedicated to providing our customers with exceptional customer service and friendly service. Our loyalty program rewards customers for their continued patronage. With our expansive selection of services and products we are sure to help you create the perfect space for your home or business. Let us help you transform your house into a home!
-
-
-
-
-                    </p>
+                    <p class="mb-4">We are dedicated to providing our customers with exceptional customer service and friendly service. Our loyalty program rewards customers for their continued patronage. With our expansive selection of services and products, we are sure to help you create the perfect space for your home or business. Let us help you transform your house into a home!</p>
                     <div class="d-flex align-items-center mb-5">
                         <div class="d-flex flex-shrink-0 align-items-center justify-content-center border border-5 border-primary" style="width: 120px; height: 120px;">
                             <h1 class="display-1 mb-n2" data-toggle="counter-up">15</h1>
@@ -141,14 +136,12 @@
                             <h3 class="mb-0">Experience</h3>
                         </div>
                     </div>
-                    <a class="btn btn-primary py-3 px-5" href="">Read More</a>
+                    <a class="btn btn-primary py-3 px-5" href="feature.php">Read More</a>
                 </div>
             </div>
         </div>
     </div>
     <!-- About End -->
-    <!-- About End -->
-
 
     <!-- Feature Start -->
     <div class="container-xxl py-5">
@@ -206,7 +199,7 @@
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <h4 class="section-title">Team Members</h4>
-                <h1 class="display-5 mb-4">We Are Creative Architecture Team For Your Dream Home</h1>
+                <h1 class="display-5 mb-4">We Are Creative Painting, Interior and Exterior Design Team For Your Dream Home</h1>
             </div>
             <div class="row g-0 team-items">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -220,8 +213,8 @@
                             </div>
                         </div>
                         <div class="bg-light text-center p-4">
-                            <h3 class="mt-2">Architect Name</h3>
-                            <span class="text-primary">Designation</span>
+                            <h3 class="mt-2">Abdillahi Mahabubu</h3>
+                            <span class="text-primary">Painting & Gypsum</span>
                         </div>
                     </div>
                 </div>
@@ -236,8 +229,8 @@
                             </div>
                         </div>
                         <div class="bg-light text-center p-4">
-                            <h3 class="mt-2">Architect Name</h3>
-                            <span class="text-primary">Designation</span>
+                            <h3 class="mt-2">Benjamin Muthoni</h3>
+                            <span class="text-primary">Fitting</span>
                         </div>
                     </div>
                 </div>
@@ -252,8 +245,8 @@
                             </div>
                         </div>
                         <div class="bg-light text-center p-4">
-                            <h3 class="mt-2">Architect Name</h3>
-                            <span class="text-primary">Designation</span>
+                            <h3 class="mt-2">Josphat Wasike</h3>
+                            <span class="text-primary">Tiles</span>
                         </div>
                     </div>
                 </div>
@@ -268,8 +261,8 @@
                             </div>
                         </div>
                         <div class="bg-light text-center p-4">
-                            <h3 class="mt-2">Architect Name</h3>
-                            <span class="text-primary">Designation</span>
+                            <h3 class="mt-2">Nicholas Kobia</h3>
+                            <span class="text-primary">Terrazzo</span>
                         </div>
                     </div>
                 </div>
@@ -280,70 +273,86 @@
         
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h3 class="text-light mb-4">Address</h3>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Mombasa, KENYA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+254 718-893-450</p>
-                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>abdulpaintsdesigns45@gmail.com</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-outline-body me-0" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h3 class="text-light mb-4">Services</h3>
-                    <a class="btn btn-link" href="gallery.php?category=gypsum">Gypsum</a>
-                    <a class="btn btn-link" href="gallery.php?category=painting">Painting</a>
-                    <a class="btn btn-link" href="gallery.php?category=terrazzo">Terrazzo</a>
-                    <a class="btn btn-link" href="gallery.php?category=fitting">Fitting</a>
-                    <a class="btn btn-link" href="gallery.php?category=cabroids">Cabroids</a>
-                    <a class="btn btn-link" href="gallery.php?category=ruff_and_tuff">Ruff &amp; Tuff</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h3 class="text-light mb-4">Quick Links</h3>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
+<div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-light mb-4">Contact Us</h3>
+                <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Mombasa, KENYA</p>
+                <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+254 718-893-450</p>
+                <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>abdulpaintsdesigns45@gmail.com</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-square btn-outline-body me-1" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-square btn-outline-body me-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-square btn-outline-body me-1" href="#"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-square btn-outline-body me-0" href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-        </div>
-        <div class="container-fluid copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a href="#">Abdul Paints and Designs</a>, All Right Reserved.
-                    </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-light mb-4">Our Services</h3>
+                <a class="btn btn-link" href="gallery.php?category=gypsum">Gypsum</a>
+                <a class="btn btn-link" href="gallery.php?category=painting">Painting</a>
+                <a class="btn btn-link" href="gallery.php?category=terrazzo">Terrazzo</a>
+                <a class="btn btn-link" href="gallery.php?category=fitting">Fitting</a>
+                <a class="btn btn-link" href="gallery.php?category=cabroids">Cabroids</a>
+                <a class="btn btn-link" href="gallery.php?category=ruff_and_tuff">Ruff &amp; Tuff</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-light mb-4">Quick Links</h3>
+                <a class="btn btn-link" href="#">About Us</a>
+                <a class="btn btn-link" href="#">Contact Us</a>
+                <a class="btn btn-link" href="#">Our Services</a>
+                <a class="btn btn-link" href="#">Privacy Policy</a>
+                <a class="btn btn-link" href="#">Terms & Conditions</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-light mb-4">Newsletter</h3>
+                <p>Subscribe to our newsletter to get the latest updates and offers.</p>
+                <div class="position-relative w-100 mt-3">
+                    <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email">
+                    <button type="button" class="btn btn-primary position-absolute top-0 end-0 mt-1 me-2 rounded-pill">Subscribe</button>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Footer End -->
-    <!-- Footer End -->
+    <div class="container-fluid text-center text-md-start py-4 px-4 px-lg-5">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                &copy; <a class="text-primary" href="#">Abdul Paints and Designs</a>, All Rights Reserved.
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+                <div class="footer-menu">
+                    <a href="#">Home</a>
+                    <a href="#">Cookies</a>
+                    <a href="#">Help</a>
+                    <a href="#">FQAs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/tempusdominus/js/moment.min.js"></script>
+<script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+<script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
 </body>
 
 </html>

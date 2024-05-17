@@ -229,99 +229,115 @@
 
 
     <!-- Testimonial Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h4 class="section-title">Testimonial</h4>
-                <h1 class="display-5 mb-4">Thousands Of Customers Who Trust Us And Our Services</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/testimonial-1.jpg' alt=''>">
-                    <p class="fs-5">Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                    <h3>Client Name</h3>
-                    <span class="text-primary">Profession</span>
-                </div>
-                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/testimonial-2.jpg' alt=''>">
-                    <p class="fs-5">Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                    <h3>Client Name</h3>
-                    <span class="text-primary">Profession</span>
-                </div>
-                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/testimonial-3.jpg' alt=''>">
-                    <p class="fs-5">Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                    <h3>Client Name</h3>
-                    <span class="text-primary">Profession</span>
-                </div>
-            </div>      
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h4 class="section-title">Testimonial</h4>
+            <h1 class="display-5 mb-4">Thousands Of Customers Who Trust Us And Our Services</h1>
         </div>
+        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+            <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/testimonial-1.jpg' alt=''>">
+                <p class="fs-5">"Abdul Paints & Designs transformed our home with their exceptional painting and interior design services. Their team was professional, courteous, and dedicated to ensuring we were completely satisfied with the final result. Highly recommended!"</p>
+                <h3>Lilliam Omiti</h3>
+                <span class="text-primary">Homeowner</span>
+            </div>
+            <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/testimonial-2.jpg' alt=''>">
+                <p class="fs-5">"The innovative solutions provided by Abdul Paints & Designs were exactly what we needed for our new office space. Their attention to detail and commitment to quality made the entire process seamless and enjoyable."</p>
+                <h3>Duncan Kingori</h3>
+                <span class="text-primary">Business Owner</span>
+            </div>
+            <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/testimonial-3.jpg' alt=''>">
+                <p class="fs-5">"We couldn't be happier with the project management and execution from Abdul Paints & Designs. They completed the project on time and within budget, while exceeding our expectations in terms of quality and craftsmanship."</p>
+                <h3>Hassan</h3>
+                <span class="text-primary">Business Owner</span>
+            </div>
+        </div>      
     </div>
-    <!-- Testimonial End -->
+</div>
+<!-- Testimonial End -->
         
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h3 class="text-light mb-4">Address</h3>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Mombasa, KENYA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+254 718-893-450</p>
-                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>abdulpaintsdesigns45@gmail.com</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-outline-body me-0" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h3 class="text-light mb-4">Services</h3>
-                    <a class="btn btn-link" href="gallery.php?category=gypsum">Gypsum</a>
-                    <a class="btn btn-link" href="gallery.php?category=painting">Painting</a>
-                    <a class="btn btn-link" href="gallery.php?category=terrazzo">Terrazzo</a>
-                    <a class="btn btn-link" href="gallery.php?category=fitting">Fitting</a>
-                    <a class="btn btn-link" href="gallery.php?category=cabroids">Cabroids</a>
-                    <a class="btn btn-link" href="gallery.php?category=ruff_and_tuff">Ruff &amp; Tuff</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h3 class="text-light mb-4">Quick Links</h3>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
+<div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-light mb-4">Contact Us</h3>
+                <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Mombasa, KENYA</p>
+                <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+254 718-893-450</p>
+                <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>abdulpaintsdesigns45@gmail.com</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-square btn-outline-body me-1" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-square btn-outline-body me-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-square btn-outline-body me-1" href="#"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-square btn-outline-body me-0" href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-        </div>
-        <div class="container-fluid copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a href="#">Abdul Paints and Designs</a>, All Right Reserved.
-                    </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-light mb-4">Our Services</h3>
+                <a class="btn btn-link" href="gallery.php?category=gypsum">Gypsum</a>
+                <a class="btn btn-link" href="gallery.php?category=painting">Painting</a>
+                <a class="btn btn-link" href="gallery.php?category=terrazzo">Terrazzo</a>
+                <a class="btn btn-link" href="gallery.php?category=fitting">Fitting</a>
+                <a class="btn btn-link" href="gallery.php?category=cabroids">Cabroids</a>
+                <a class="btn btn-link" href="gallery.php?category=ruff_and_tuff">Ruff &amp; Tuff</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-light mb-4">Quick Links</h3>
+                <a class="btn btn-link" href="#">About Us</a>
+                <a class="btn btn-link" href="#">Contact Us</a>
+                <a class="btn btn-link" href="#">Our Services</a>
+                <a class="btn btn-link" href="#">Privacy Policy</a>
+                <a class="btn btn-link" href="#">Terms & Conditions</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-light mb-4">Newsletter</h3>
+                <p>Subscribe to our newsletter to get the latest updates and offers.</p>
+                <div class="position-relative w-100 mt-3">
+                    <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email">
+                    <button type="button" class="btn btn-primary position-absolute top-0 end-0 mt-1 me-2 rounded-pill">Subscribe</button>
                 </div>
             </div>
         </div>
     </div>
-        
-    <!-- Footer End -->
+    <div class="container-fluid text-center text-md-start py-4 px-4 px-lg-5">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                &copy; <a class="text-primary" href="#">Abdul Paints and Designs</a>, All Rights Reserved.
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+                <div class="footer-menu">
+                    <a href="#">Home</a>
+                    <a href="#">Cookies</a>
+                    <a href="#">Help</a>
+                    <a href="#">FQAs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/tempusdominus/js/moment.min.js"></script>
+<script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+<script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
 </body>
 
 </html>
