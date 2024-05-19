@@ -1,4 +1,5 @@
 <?php
+// Assuming you have started the session already
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
@@ -11,46 +12,13 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
-
-// Check the user's role
+// Check if the user is a regular user, redirect to gallery_without_upload.php
 if ($_SESSION['user_role'] === 'Regular') {
-    // Redirect regular users to the gallery_without_upload.php page
     header('Location: gallery_without_upload.php');
     exit();
 }
 
-
-
-$category = isset($_GET['category']) ? $_GET['category'] : 'all';
-
-if ($category === 'all') {
-    $sql = "SELECT * FROM image";
-} else {
-    // Use prepared statement to prevent SQL injection
-    $sql = "SELECT * FROM image WHERE category = ?";
-}
-
-$stmt = mysqli_prepare($conn, $sql);
-
-if ($category !== 'all') {
-    mysqli_stmt_bind_param($stmt, "s", $category);
-}
-
-mysqli_stmt_execute($stmt);
-
-$result = mysqli_stmt_get_result($stmt);
-
-// Create an array to store images categorized by category
-$imagesByCategory = array();
-
-while ($row = mysqli_fetch_assoc($result)) {
-    $category = $row['category'];
-    if (!isset($imagesByCategory[$category])) {
-        $imagesByCategory[$category] = array();
-    }
-    $imagesByCategory[$category][] = $row;
-}
-
+// Check for POST method to handle image upload
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $category = isset($_POST["category"]) ? $_POST["category"] : '';
 
@@ -77,10 +45,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if (move_uploaded_file($_FILES["image"]["tmp_name"], $targetFile)) {
                 // Use prepared statement to prevent SQL injection
-                $sql = "INSERT INTO image (file_name, category) VALUES (?, ?)";
+                $sql = "INSERT INTO image (file_name, category, uploaded_by) VALUES (?, ?, ?)";
                 $stmt = mysqli_prepare($conn, $sql);
 
-                mysqli_stmt_bind_param($stmt, "ss", $uniqueFileName, $category);
+                // Get the user_id from the session
+                $user_id = $_SESSION['user_id'];
+
+                mysqli_stmt_bind_param($stmt, "sss", $uniqueFileName, $category, $user_id);
 
                 if (mysqli_stmt_execute($stmt)) {
                     echo "Image uploaded successfully!";
@@ -270,7 +241,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Add a delete button with a form for each image
             echo '<form method="post" action="delete_image.php" class="delete-form">';
-            echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
+            echo '<input type="hidden" name="image_id" value="' . $row['image_id'] . '">';
             echo '<button type="submit" class="btn btn-danger btn-sm">Delete</button>';
             echo '</form>';
 

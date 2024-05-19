@@ -3,9 +3,18 @@
 include 'config.php';
 
 // Initialize variables to store user inputs and error messages
-$username = $email = $password = $role = '';
+$username = $email = $password = '';
 $usernameErr = $emailErr = $passwordErr = '';
 $registrationSuccess = false;
+
+// Check if there's already an Owner in the database
+$ownerExists = false;
+$sql = "SELECT COUNT(*) AS ownerCount FROM users WHERE role = 'Owner'";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
+if ($row['ownerCount'] > 0) {
+    $ownerExists = true;
+}
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Validate and sanitize user inputs
@@ -33,29 +42,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
     }
 
-    if (empty($_POST['role'])) {
-        $role = 'Regular'; // Default role if none selected
-    } else {
-        $role = $_POST['role'];
-    }
-
-    // Check if the selected role is "Owner"
-    if ($role === 'Owner') {
-        // Check if this is the first owner registered
-        $sql = "SELECT COUNT(*) AS ownerCount FROM users WHERE role = 'Owner'";
-        $result = mysqli_query($conn, $sql);
-        $row = mysqli_fetch_assoc($result);
-        $ownerCount = $row['ownerCount'];
-
-        // If this is the first owner, grant admin privileges
-        if ($ownerCount === 0) {
-            $role = 'Admin'; // Update the role to Admin
-        } else {
-            // If not the first owner, redirect to registration page
-            echo "<script>alert('You don't have permission to register as an owner. Please register as regular.');</script>";
-            echo "<script>window.location.href = 'register.php';</script>";
-            exit();
-        }
+    // Set the role based on the owner existence
+    $role = 'Regular';
+    if (!$ownerExists && isset($_POST['role']) && $_POST['role'] == 'Owner') {
+        $role = 'Owner';
     }
 
     // Check if there are no input errors

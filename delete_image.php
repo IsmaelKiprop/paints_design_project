@@ -8,18 +8,26 @@ if (session_status() == PHP_SESSION_NONE) {
 include 'config.php';
 
 // Check if the user is logged in and has the necessary permissions
+// Replace this with your actual permission checking mechanism
+$user_id = $_SESSION['user_id']; // Adjust this according to your session variable
+
+if (!isset($user_id)) {
+    echo 'Error: User not logged in or insufficient permissions';
+    exit();
+}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $imageId = $_POST["id"];
+    $imageId = $_POST["image_id"];
     
     // Fetch the image information from the database
-    $sql = "SELECT file_name, category FROM image WHERE id = ?";
+    $sql = "SELECT file_name, category FROM image WHERE image_id = ?";
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stmt, "i", $imageId);
     mysqli_stmt_execute($stmt);
     $result = mysqli_stmt_get_result($stmt);
     
-    if ($row = mysqli_fetch_assoc($result)) {
+    if ($result && mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
         $fileName = $row['file_name'];
         $category = $row['category'];
         
@@ -31,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Delete the file from the server
             if (unlink($imagePath)) {
                 // Delete the image record from the database
-                $sql = "DELETE FROM image WHERE id = ?";
+                $sql = "DELETE FROM image WHERE image_id = ?";
                 $stmt = mysqli_prepare($conn, $sql);
                 mysqli_stmt_bind_param($stmt, "i", $imageId);
                 if (mysqli_stmt_execute($stmt)) {
@@ -62,8 +70,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Handle image not found in the database
         echo 'Error: Image not found in the database';
     }
+} else {
+    // Handle POST method error
+    echo 'Error: POST method not detected';
 }
 
-// Handle file deletion error
-echo 'Error: ' . error_get_last()['message'];
+// Handle other errors
+if (error_get_last()) {
+    echo 'Error: ' . error_get_last()['message'];
+}
 ?>
