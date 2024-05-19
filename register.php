@@ -141,7 +141,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
                 <button type="submit" class="btn btn-primary btn-block mt-4">Register</button>
             </form>
-            <p class="text-center mt-3" style="color: black;">Already registered? <a class="btn btn-primary" href="login.php" style="border: 2px solid #007bff; background-color: #007bff; color: white; text-decoration: none;">Log In</a></p>
+            <p class="text-center mt-3" style="color: black;">Already registered? <a class="btn btn-primary" href="login.php" style="border: 2px solid #B78D65; background-color: #B78D65; color: white; text-decoration: none;">Log In</a></p>
         </div>
     </div>
 </body>
@@ -160,7 +160,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     /* Add a frame around the registration form */
     .registration-form {
-        border: 2px solid #007bff; /* Blue border */
+        border: 2px solid #B78D65; /* Blue border */
         padding: 30px; /* Padding */
         border-radius: 20px; /* Rounded corners */
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
@@ -183,19 +183,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     /* Style the "Register" button */
     .btn-primary {
-        background-color: #007bff; /* Blue color */
+        background-color: #B78D65; /* Blue color */
         color: white;
         border: none;
         padding: 10px 20px;
         cursor: pointer;
         border-radius: 5px;
         transition: background-color 0.3s;
-        border: 2px solid #007bff; /* Add a blue border */
+        border: 2px solid #B78D65; /* Add a blue border */
     }
 
     /* Change the button background color on hover */
     .btn-primary:hover {
-        background-color: #0056b3; /* Darker blue on hover */
+        background-color: #B78D65; /* Darker blue on hover */
     }
 
     /* Style the "Log In" link */
@@ -215,6 +215,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     /* Dark blue hover effect */
     a.btn.btn-primary:hover {
-        background-color: #0056b3;
+        background-color: #B78D65;
     }
 </style>

@@ -103,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 echo '<p class="error-message mt-3 text-danger text-center">' . htmlspecialchars($login_error) . '</p>';
             }
             ?>
-            <p class="text-center mt-3" style="color: black;">Don't have an account? <a class="btn btn-primary" href="register.php" style="border: 2px solid #007bff; background-color: #007bff; color: white; text-decoration: none;">Register here</a></p>
+            <p class="text-center mt-3" style="color: black;">Don't have an account? <a class="btn btn-primary" href="register.php" style="border: 2px solid #B78D65; background-color: #B78D65; color: white; text-decoration: none;">Register here</a></p>
         </div>
     </div>
 </body>
@@ -122,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     /* Add a frame around the login form */
     .login-form {
-        border: 2px solid #007bff; /* Blue border */
+        border: 2px solid #B78D65; /* Blue border */
         padding: 30px; /* Padding */
         border-radius: 20px; /* Rounded corners */
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
@@ -148,7 +148,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         text-align: center; /* Center-align the text */
         margin-top: 15px; /* Top margin for spacing */
         text-decoration: none; /* Remove underlines */
-        color: #007bff; /* Initial color */
+        color: #B78D65; /* Initial color */
         transition: color 0.3s; /* Smooth color transition */
     }
 
@@ -164,7 +164,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     /* Adjust the button style */
     .btn-primary {
-        background-color: #007bff; /* Blue color */
+        background-color: #B78D65; /* Blue color */
         border: none; /* No border */
         padding: 10px 20px; /* Padding */
         cursor: pointer; /* Pointer cursor */
