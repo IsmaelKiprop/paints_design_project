@@ -82,67 +82,74 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </script>
 </head>
 
-        <body>
+<body>
     <div class="container">
         <div class="login-form">
-            <h2>Login</h2>
+            <h2 class="text-center mb-4">Welcome Back!</h2>
             <form method="post" action="login.php">
                 <div class="form-group">
                     <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required>
+                    <input type="text" id="username" name="username" class="form-control" required>
                 </div>
-                <div class="form-group">
+                <div class="form-group mt-3">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
+                    <input type="password" id="password" name="password" class="form-control" required>
                 </div>
-                <button type="submit">Login</button>
+                <button type="submit" class="btn btn-primary btn-block mt-4">Login</button>
             </form>
             <?php
             // Display login error message if it exists
             if (isset($login_error)) {
-                echo '<p class="error-message">' . htmlspecialchars($login_error) . '</p>';
+                echo '<p class="error-message mt-3 text-danger text-center">' . htmlspecialchars($login_error) . '</p>';
             }
             ?>
-           <p style="color: black;">Don't have an account? <a class="btn btn-primary" href="register.php" style="border: 2px solid #007bff; background-color: #007bff; color: white; text-decoration: none;">Register here</a></p>
+            <p class="text-center mt-3" style="color: black;">Don't have an account? <a class="btn btn-primary" href="register.php" style="border: 2px solid #007bff; background-color: #007bff; color: white; text-decoration: none;">Register here</a></p>
         </div>
     </div>
-    </body>
+</body>
 
 </html>
 
 <style>
-       /* Center-align the login form */
+    /* Center-align the login form */
     .container {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh; /* Adjust the height as needed */
+        background: #f8f9fa; /* Light background color */
     }
 
     /* Add a frame around the login form */
     .login-form {
-        border: 2px solid #ccc; /* Increased border thickness */
-        padding: 30px; /* Increased padding */
-        border-radius: 20px; /* Adjusted border-radius for a more rounded frame */
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-        width: 300px; /* Adjust the width of the form */
-        background-color: #B78D65; /* Set the background color of the frame */
+        border: 2px solid #007bff; /* Blue border */
+        padding: 30px; /* Padding */
+        border-radius: 20px; /* Rounded corners */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        width: 400px; /* Form width */
+        background-color: #ffffff; /* White background */
     }
 
     /* Style the form labels */
     .form-group label {
         display: block; /* Display labels as blocks */
-        margin-bottom: 5px; /* Add some space between labels and input fields */
+        margin-bottom: 5px; /* Space between labels and input fields */
+        color: #333; /* Dark label color */
+    }
+
+    /* Style the error message */
+    .error-message {
+        font-size: 0.875rem; /* Smaller font size */
     }
 
     /* Style the "Register here" link */
     .register-link {
         display: block; /* Display as a block-level element */
         text-align: center; /* Center-align the text */
-        margin-top: 15px; /* Add some top margin for spacing */
-        text-decoration: none; /* Remove default underlines */
-        color: #007bff; /* Set the initial color */
-        transition: color 0.3s; /* Add a smooth color transition on hover */
+        margin-top: 15px; /* Top margin for spacing */
+        text-decoration: none; /* Remove underlines */
+        color: #007bff; /* Initial color */
+        transition: color 0.3s; /* Smooth color transition */
     }
 
     /* Change the link color on hover */
@@ -150,10 +157,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         color: #0056b3; /* Hover color */
     }
 
-     /* Dark blue hover effect */
+    /* Dark blue hover effect */
     a.btn.btn-primary:hover {
         background-color: #0056b3;
     }
-</style>
 
-            
+    /* Adjust the button style */
+    .btn-primary {
+        background-color: #007bff; /* Blue color */
+        border: none; /* No border */
+        padding: 10px 20px; /* Padding */
+        cursor: pointer; /* Pointer cursor */
+        border-radius: 5px; /* Rounded corners */
+        transition: background-color 0.3s; /* Smooth transition */
+    }
+</style>

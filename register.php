@@ -112,40 +112,42 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         });
     </script>
 </head>
+
 <body>
     <div class="container">
-    <div class="registration-form">
-        <h2>Register</h2>
-        <form method="post" action="register.php">
-            <div class="form-group">
-                <input type="text" id="username" name="username" placeholder="Username" required>
-                <span class="error"><?php echo $usernameErr; ?></span> <!-- Display username error -->
-            </div>
-            <div class="form-group" style="margin-top: 10px;"> <!-- Add margin-top for spacing -->
-                <input type="email" id="email" name="email" placeholder="Email" required>
-                <span class="error"><?php echo $emailErr; ?></span> <!-- Display email error -->
-            </div>
-            <div class="form-group" style="margin-top: 10px;"> <!-- Add margin-top for spacing -->
-                <input type="password" id="password" name="password" placeholder="Password" required>
-                <span class="error"><?php echo $passwordErr; ?></span> <!-- Display password error -->
-            </div>
-            <!-- Role Selection Field -->
-            <div class="form-group" style="margin-top: 10px;"> <!-- Add margin-top for spacing -->
-                <label for="role">Select Role:</label>
-                <select name="role" id="role" required>
-                    <option value="Regular">Regular</option>
-                    <option value="Owner">Owner</option>
-                    <!-- Add more options for other roles if needed -->
-                </select>
-            </div>
-                <button type="submit" class="btn btn-primary">Register</button>
+        <div class="registration-form">
+            <h2 class="text-center mb-4">Create Your Account</h2>
+            <form method="post" action="register.php">
+                <div class="form-group">
+                    <input type="text" id="username" name="username" class="form-control" placeholder="Username" required>
+                    <span class="error"><?php echo $usernameErr; ?></span> <!-- Display username error -->
+                </div>
+                <div class="form-group mt-3"> <!-- Add margin-top for spacing -->
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+                    <span class="error"><?php echo $emailErr; ?></span> <!-- Display email error -->
+                </div>
+                <div class="form-group mt-3"> <!-- Add margin-top for spacing -->
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+                    <span class="error"><?php echo $passwordErr; ?></span> <!-- Display password error -->
+                </div>
+                <!-- Role Selection Field -->
+                <div class="form-group mt-3"> <!-- Add margin-top for spacing -->
+                    <label for="role" class="mt-2">Select Role:</label>
+                    <select name="role" id="role" class="form-control" required>
+                        <option value="Regular">Regular</option>
+                        <option value="Owner">Owner</option>
+                        <!-- Add more options for other roles if needed -->
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block mt-4">Register</button>
             </form>
-            <p style="color: black;">Already registered? <a class="btn btn-primary" href="login.php">Log In</a></p>
+            <p class="text-center mt-3" style="color: black;">Already registered? <a class="btn btn-primary" href="login.php" style="border: 2px solid #007bff; background-color: #007bff; color: white; text-decoration: none;">Log In</a></p>
         </div>
     </div>
 </body>
 
 </html>
+
 <style>
     /* Center-align the registration form */
     .container {
@@ -153,25 +155,34 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         justify-content: center;
         align-items: center;
         height: 100vh; /* Adjust the height as needed */
+        background: #f8f9fa; /* Light background color */
     }
 
     /* Add a frame around the registration form */
     .registration-form {
-        border: 2px solid #ccc; /* Increased border thickness */
-        padding: 30px; /* Increased padding */
-        border-radius: 20px; /* Adjusted border-radius for a more rounded frame */
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-        background-color: #B78D65; /* Background color for the registration form */
+        border: 2px solid #007bff; /* Blue border */
+        padding: 30px; /* Padding */
+        border-radius: 20px; /* Rounded corners */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        width: 400px; /* Form width */
+        background-color: #ffffff; /* White background */
     }
 
     /* Style the form labels */
     .form-group label {
         display: block; /* Display labels as blocks */
-        margin-bottom: 5px; /* Add some space between labels and input fields */
+        margin-bottom: 5px; /* Space between labels and input fields */
+        color: #333; /* Dark label color */
+    }
+
+    /* Style the error message */
+    .error {
+        color: #ff0000; /* Red color for errors */
+        font-size: 0.875rem; /* Smaller font size */
     }
 
     /* Style the "Register" button */
-    .registration-form button[type="submit"] {
+    .btn-primary {
         background-color: #007bff; /* Blue color */
         color: white;
         border: none;
@@ -183,30 +194,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     /* Change the button background color on hover */
-    .registration-form button[type="submit"]:hover {
+    .btn-primary:hover {
         background-color: #0056b3; /* Darker blue on hover */
     }
 
     /* Style the "Log In" link */
-    .registration-form a.btn {
+    a.btn {
         display: block; /* Display as a block-level element */
         text-align: center; /* Center-align the text */
-        margin-top: 15px; /* Add some top margin for spacing */
-        text-decoration: none; /* Remove default underlines */
-        color: white; /* Set the initial color */
-        transition: color 0.3s; /* Add a smooth color transition on hover */
+        margin-top: 15px; /* Top margin for spacing */
+        text-decoration: none; /* Remove underlines */
+        color: white; /* Initial color */
+        transition: color 0.3s; /* Smooth color transition */
     }
 
     /* Change the link color on hover */
-    .registration-form a.btn:hover {
+    a.btn:hover {
         color: white; /* Hover color */
     }
 
     /* Dark blue hover effect */
-    .btn.btn-primary:hover {
+    a.btn.btn-primary:hover {
         background-color: #0056b3;
     }
 </style>
-
-
-
