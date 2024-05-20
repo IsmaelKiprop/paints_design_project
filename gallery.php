@@ -262,7 +262,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <h3 class="text-light mb-4">Contact Us</h3>
                 <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Mombasa, KENYA</p>
                 <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+254 718-893-450</p>
-                <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>abdulpaintsdesigns45@gmail.com</p>
+                <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>abdulpaintsanddesign@gmail.com</p>
                 <div class="d-flex pt-2">
                     <a class="btn btn-square btn-outline-body me-1" href="#"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-square btn-outline-body me-1" href="#"><i class="fab fa-facebook-f"></i></a>

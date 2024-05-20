@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'abdulpaintsanddesign@gmail.com';
-        $mail->Password = 'abdul001???';
+        $mail->Password = 'abdul1234???';
         $mail->SMTPSecure = 'tls'; // Enable TLS encryption (or 'ssl' for SSL encryption)
         $mail->Port = 587; // Use 587 for TLS or 465 for SSL
 

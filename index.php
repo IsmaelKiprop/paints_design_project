@@ -93,8 +93,8 @@
     <!-- Carousel Start -->
     <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="owl-carousel header-carousel position-relative">
-            <div class="owl-carousel-item position-relative" data-dot="<img src='img/abdul/paint 0.png' alt='Thumbnail'>">
-                <img class="img-fluid" src="img/abdul/paint 0.png" alt="Carousel Image 1">
+            <div class="owl-carousel-item position-relative" data-dot="<img src='img/abdul/kitchen-1336160_1280.jpg' alt='Thumbnail'>">
+                <img class="img-fluid" src="img/abdul/kitchen-1336160_1280.jpg" alt="Carousel Image 1">
                 <div class="owl-carousel-inner">
                     <div class="container">
                         <div class="row justify-content-start">
@@ -107,8 +107,8 @@
                     </div>
                 </div>
             </div>
-            <div class="owl-carousel-item position-relative" data-dot="<img src='img/abdul/gypsum 0.png' alt='Thumbnail'>">
-                <img class="img-fluid" src="img/abdul/gypsum 0.png" alt="Carousel Image 2">
+            <div class="owl-carousel-item position-relative" data-dot="<img src='img/abdul/josef-friedrich-schmidt-791859_1280.jpg' alt='Thumbnail'>">
+                <img class="img-fluid" src="img/abdul/josef-friedrich-schmidt-791859_1280.jpg" alt="Carousel Image 2">
                 <div class="owl-carousel-inner">
                     <div class="container">
                         <div class="row justify-content-start">
@@ -121,8 +121,8 @@
                     </div>
                 </div>
             </div>
-            <div class="owl-carousel-item position-relative" data-dot="<img src='img/abdul/gypsum 2.png' alt='Thumbnail'>">
-                <img class="img-fluid" src="img/abdul/gypsum 2.png" alt="Carousel Image 3">
+            <div class="owl-carousel-item position-relative" data-dot="<img src='img/abdul/kitchen-2400367_1280.jpg' alt='Thumbnail'>">
+                <img class="img-fluid" src="img/abdul/kitchen-2400367_1280.jpg" alt="Carousel Image 3">
                 <div class="owl-carousel-inner">
                     <div class="container">
                         <div class="row justify-content-start">
@@ -548,7 +548,7 @@
                             </div>
                             <div class="ms-4">
                                 <p class="mb-2">Mail Us Now</p>
-                                <h3 class="mb-0">abdulpaintsdesigns45@gmail.com</h3>
+                                <h3 class="mb-0">abdulpaintsanddesign@gmail.com</h3>
                             </div>
                         </div>
                     </div>
@@ -640,7 +640,7 @@
                 <h3 class="text-light mb-4">Contact Us</h3>
                 <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Mombasa, KENYA</p>
                 <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+254 718-893-450</p>
-                <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>abdulpaintsdesigns45@gmail.com</p>
+                <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>abdulpaintsanddesign@gmail.com</p>
                 <div class="d-flex pt-2">
                     <a class="btn btn-square btn-outline-body me-1" href="#"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-square btn-outline-body me-1" href="#"><i class="fab fa-facebook-f"></i></a>
