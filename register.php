@@ -3,9 +3,10 @@
 include 'config.php';
 
 // Initialize variables to store user inputs and error messages
-$username = $email = $password = '';
-$usernameErr = $emailErr = $passwordErr = '';
+$username = $email = $password = $countryCode = $phone = '';
+$usernameErr = $emailErr = $passwordErr = $phoneErr = '';
 $registrationSuccess = false;
+$successMessage = '';
 
 // Check if there's already an Owner in the database
 $ownerExists = false;
@@ -38,8 +39,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $passwordErr = 'Password is required.';
     } else {
         $password = $_POST['password'];
-        // Hash the password using password_hash
-        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+        // Check if the password is exactly 4 digits
+        if (!preg_match('/^\d{4}$/', $password)) {
+            $passwordErr = 'Password must be exactly 4 digits.';
+        } else {
+            // Hash the password using password_hash
+            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+        }
+    }
+
+    if (empty($_POST['phone'])) {
+        $phoneErr = 'Phone number is required.';
+    } else {
+        $countryCode = mysqli_real_escape_string($conn, $_POST['countryCode']);
+        $phone = mysqli_real_escape_string($conn, $_POST['phone']);
+        // Validate phone number format
+        if (!preg_match('/^\d{6,15}$/', $phone)) {
+            $phoneErr = 'Invalid phone number format.';
+        }
     }
 
     // Set the role based on the owner existence
@@ -49,23 +66,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Check if there are no input errors
-    if (empty($usernameErr) && empty($emailErr) && empty($passwordErr)) {
+    if (empty($usernameErr) && empty($emailErr) && empty($passwordErr) && empty($phoneErr)) {
         // Insert user into the database using prepared statements
-        $stmt = $conn->prepare("INSERT INTO users (username, email, password, role) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("ssss", $username, $email, $hashedPassword, $role);
+        $stmt = $conn->prepare("INSERT INTO users (username, email, password, country_code, phone, role) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssssss", $username, $email, $hashedPassword, $countryCode, $phone, $role);
 
         if ($stmt->execute()) {
             $registrationSuccess = true;
-
-            // Redirect to the login page after a successful registration
-            header('Location: login.php');
-            exit();
+            $successMessage = 'Registration successful! You will be redirected to the login page shortly.';
+            // Redirect to the login page after a short delay
+            header("refresh:3;url=login.php");
         } else {
             echo 'Error: ' . mysqli_error($conn);
         }
     }
 }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -103,9 +121,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 var username = $("#username").val();
                 var email = $("#email").val();
                 var password = $("#password").val();
+                var phone = $("#phone").val();
 
-                if (username === "" || email === "" || password === "") {
+                if (username === "" || email === "" || password === "" || phone === "") {
                     alert("Please fill in all fields");
+                    event.preventDefault();
+                }
+
+                // Check if the password is exactly 4 digits
+                if (!/^\d{4}$/.test(password)) {
+                    alert("Password must be exactly 4 digits.");
+                    event.preventDefault();
+                }
+
+                // Check if the phone number format is valid
+                if (!/^\d{6,15}$/.test(phone)) {
+                    alert("Invalid phone number format.");
                     event.preventDefault();
                 }
             });
@@ -117,18 +148,49 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="container">
         <div class="registration-form">
             <h2 class="text-center mb-4">Create Your Account</h2>
+            <?php if ($registrationSuccess): ?>
+                <div class="alert alert-success">
+                    <?php echo $successMessage; ?>
+                </div>
+            <?php endif; ?>
             <form method="post" action="register.php">
                 <div class="form-group">
-                    <input type="text" id="username" name="username" class="form-control" placeholder="Username" required>
+                    <input type="text" id="username" name="username" class="form-control" placeholder="Username" value="<?php echo htmlspecialchars($username); ?>" required>
                     <span class="error"><?php echo $usernameErr; ?></span> <!-- Display username error -->
                 </div>
                 <div class="form-group mt-3"> <!-- Add margin-top for spacing -->
-                    <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Email" value="<?php echo htmlspecialchars($email); ?>" required>
                     <span class="error"><?php echo $emailErr; ?></span> <!-- Display email error -->
                 </div>
                 <div class="form-group mt-3"> <!-- Add margin-top for spacing -->
-                    <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Password (4 digits)" required>
                     <span class="error"><?php echo $passwordErr; ?></span> <!-- Display password error -->
+                </div>
+                <!-- Phone Number Field -->
+                <div class="form-group mt-3"> <!-- Add margin-top for spacing -->
+                    <label for="phone" class="mt-2">Phone Number:</label>
+                    <div class="input-group">
+                        <select name="countryCode" id="countryCode" class="form-control" required>
+                            <option value="+1">+1 (USA)</option>
+                            <option value="+44">+44 (UK)</option>
+                            <option value="+91">+91 (India)</option>
+                            <option value="+254">+254 (Kenya)</option>
+                            <option value="+61">+61 (Australia)</option>
+                            <option value="+81">+81 (Japan)</option>
+                            <option value="+49">+49 (Germany)</option>
+                            <option value="+33">+33 (France)</option>
+                            <option value="+39">+39 (Italy)</option>
+                            <option value="+86">+86 (China)</option>
+                            <option value="+55">+55 (Brazil)</option>
+                            <option value="+27">+27 (South Africa)</option>
+                            <option value="+234">+234 (Nigeria)</option>
+                            <option value="+7">+7 (Russia)</option>
+                            <option value="+82">+82 (South Korea)</option>
+                            <!-- Add more country codes as needed -->
+                        </select>
+                        <input type="text" id="phone" name="phone" class="form-control" placeholder="Phone Number" value="<?php echo htmlspecialchars($phone); ?>" required>
+                    </div>
+                    <span class="error"><?php echo $phoneErr; ?></span> <!-- Display phone error -->
                 </div>
                 <!-- Role Selection Field -->
                 <div class="form-group mt-3"> <!-- Add margin-top for spacing -->
@@ -160,7 +222,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     /* Add a frame around the registration form */
     .registration-form {
-        border: 2px solid #B78D65; /* Blue border */
+        border: 2px solid #B78D65; /* Border color */
         padding: 30px; /* Padding */
         border-radius: 20px; /* Rounded corners */
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
@@ -183,19 +245,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     /* Style the "Register" button */
     .btn-primary {
-        background-color: #B78D65; /* Blue color */
+        background-color: #B78D65; /* Primary color */
         color: white;
         border: none;
         padding: 10px 20px;
         cursor: pointer;
         border-radius: 5px;
         transition: background-color 0.3s;
-        border: 2px solid #B78D65; /* Add a blue border */
+        border: 2px solid #B78D65; /* Add a border */
     }
 
     /* Change the button background color on hover */
     .btn-primary:hover {
-        background-color: #B78D65; /* Darker blue on hover */
+        background-color: #A57856; /* Darker shade on hover */
     }
 
     /* Style the "Log In" link */
@@ -213,8 +275,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         color: white; /* Hover color */
     }
 
-    /* Dark blue hover effect */
+    /* Darker hover effect */
     a.btn.btn-primary:hover {
-        background-color: #B78D65;
+        background-color: #A57856;
     }
 </style>
